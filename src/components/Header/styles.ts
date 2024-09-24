@@ -7,7 +7,11 @@ export const HeaderContainer = styled.div`
   display: flex;
   justify-content: space-between;
 
-  background-color: ${props => props.theme['blue-800']};
+  
+
+  background: linear-gradient(
+    0deg, rgba(50,148,248,0.1) 0%, 
+    rgba(11,27,43,1) 100%);
 
   > div {
     display: flex;
@@ -19,6 +23,8 @@ export const HeaderContainer = styled.div`
     top: 4rem;
     left: 50%;
     transform: translate(-50%);
+    
+    cursor: pointer;
 
     img {
       width: 2.8rem;

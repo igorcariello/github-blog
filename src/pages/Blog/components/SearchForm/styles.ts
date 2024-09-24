@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const ContainerSearchForm = styled.div`
+export const ContainerSearchForm = styled.form`
 
   > input {
     width: 100%;

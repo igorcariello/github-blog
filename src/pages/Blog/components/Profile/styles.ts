@@ -53,11 +53,13 @@ export const ProfileHeader = styled.header`
     align-items: center;
 
     color: ${props => props.theme['blue-base']};
+
+    &:hover {
+      text-decoration: underline;
+    }
+
   }
 
-  a:hover {
-    text-decoration: underline;
-  }
 
 
 `

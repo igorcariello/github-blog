@@ -38,7 +38,8 @@ export const HeaderSearchform = styled.div`
 `
 
 export const ContainerCards = styled.div`
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
   gap: 2rem;
+
+  flex-wrap: wrap;
 `

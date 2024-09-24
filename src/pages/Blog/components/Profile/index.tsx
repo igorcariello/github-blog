@@ -14,41 +14,41 @@ import { faBuilding, faUserGroup, faArrowUpRightFromSquare }
 
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 
-import imageProfile
-  from '../../../../assets/Bárbara e Igor (372) (Cópia).jpg'
+import { useContext } from 'react'
+import { DataContext } from '../../../../contexts/DataContexts'
 
 export function Profile() {
-  const imageProf = imageProfile
+  const { user } = useContext(DataContext)
+  const imageProf = user?.avatar_url
   return (
     <ProfileContainer>
       <img src={imageProf} alt="" />
 
       <ProfileContent>
         <ProfileHeader>
-          <strong> Cameron Williamson </strong>
-          <a href="http://">
+          <strong> {user?.name} </strong>
+          <a href={user?.html_url}>
             GITHUB
             <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
           </a>
         </ProfileHeader>
         <ProfileMain>
-          <p>Tristique volutpat pulvinar vel massa, pellentesque egestas.
-            Eu viverra massa quam dignissim aenean malesuada suscipit.
-            Nunc, volutpat pulvinar vel mass.
+          <p>
+            {user?.bio}
           </p>
         </ProfileMain>
         <ProfileFooter>
           <p>
             <FontAwesomeIcon icon={faGithub} />
-            cameronwll
+            {user?.login}
           </p>
           <p>
             <FontAwesomeIcon icon={faBuilding} />
-            Rocketseat
+            {user?.company}
           </p>
           <p>
             <FontAwesomeIcon icon={faUserGroup} />
-            32 seguidores
+            {user?.followers} seguidores
           </p>
         </ProfileFooter>
       </ProfileContent>

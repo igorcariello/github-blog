@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const ContainerTitle = styled.div`
   width: 100%;
-  height: 10.5rem;
+  min-height: 10.5rem;
 
   border-radius: 10px;
   box-shadow: 0px 2px 28px 0px rgba(0, 0, 0, 0.20);
@@ -31,7 +31,7 @@ export const HeaderTitle = styled.div`
 
   margin-bottom: 1.5rem;
 
-  > a {
+  > a, button {
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -43,7 +43,11 @@ export const HeaderTitle = styled.div`
     font-size: 0.75rem;
     font-weight: 700;
 
+    background: transparent;
+    border: none;
     color: ${props => props.theme['blue-base']};
+
+    cursor: pointer;
 
     svg {
       height: 0.75rem;
